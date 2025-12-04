@@ -1,73 +1,46 @@
-# React + TypeScript + Vite
+# Sound Mood Atlas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+*A digital experiment in mapping music to emotion through expressive, interactive design.*
 
-Currently, two official plugins are available:
+Sound Mood Atlas explores how would, color, and emotion intersect.
+Users can upload or enter songs, and the system visualizes their emotional characteristics through interactive UI, motion, and gradients.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project blends front-end engineering, design sensibility, and creative tech ~ a playground for experimenting with music, mood, and visual storytelling.
 
-## React Compiler
+# Concept
+Music carries emotional metadata ~ energy, mood, tone, intensity ~ and those qualities shift depending on our inner world.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The goal of this project is to:
+* translate those emotional qualities into visual form
+* explore expressive UI patterns
+* prototype emotional interactions (color, motion, shape)
+* create a "map" or "atlas" of song moods
+* reflect how our listening habits reveal emotional patterns over time (e.g., 'what was my mood of all the songs I downloaded in May?')
 
-## Expanding the ESLint configuration
+This is both a technical and artistic project.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+# Tech Stack
+* React + Typescript
+* Vite
+* TailwindCSS
+* Node / npm
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+# Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone the repo:
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+git clone git@github.com:naomi-barrera/sound-mood-atlas.git
+cd sound-mood-atlas
+```
+Install dependencies:
+```
+npm install
+```
+Start the dev server:
+```
+npm run dev
+```
+The app will run at:
+```
+http://localhost:5173
 ```
